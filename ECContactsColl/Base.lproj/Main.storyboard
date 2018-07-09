@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jf1-2x-rEb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,108 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ECContactsColl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3BX-bx-cLR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="1ri-Ra-LTt" customClass="ContactsCollectionViewLayout" customModule="ECContactsColl" customModuleProvider="target">
+                                    <size key="itemSize" width="106" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContactCollectionViewCell" id="jxL-7Q-0HA" customClass="ContactCollectionViewCell" customModule="ECContactsColl" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="106" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-44-odL">
+                                                    <rect key="frame" x="3" y="72" width="100" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gig-jQ-93B">
+                                                    <rect key="frame" x="27.5" y="4" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098398987676056343" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Una-OI-xz7"/>
+                                                        <constraint firstAttribute="width" secondItem="Gig-jQ-93B" secondAttribute="height" multiplier="1:1" id="igT-88-SAH"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="Gig-jQ-93B" firstAttribute="centerX" secondItem="kpg-44-odL" secondAttribute="centerX" id="FSd-0k-4NV"/>
+                                            <constraint firstItem="Gig-jQ-93B" firstAttribute="top" secondItem="jxL-7Q-0HA" secondAttribute="top" constant="4" id="KfF-Oe-2RC"/>
+                                            <constraint firstAttribute="bottom" secondItem="kpg-44-odL" secondAttribute="bottom" constant="2" id="QvW-SS-nYb"/>
+                                            <constraint firstItem="kpg-44-odL" firstAttribute="leading" secondItem="jxL-7Q-0HA" secondAttribute="leading" constant="3" id="iWi-Lc-fdg"/>
+                                            <constraint firstAttribute="trailing" secondItem="kpg-44-odL" secondAttribute="trailing" constant="3" id="j5T-yl-Xe3"/>
+                                            <constraint firstItem="kpg-44-odL" firstAttribute="centerX" secondItem="jxL-7Q-0HA" secondAttribute="centerX" id="yOR-TK-Y7q"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="contactImage" destination="Gig-jQ-93B" id="Io7-IZ-15D"/>
+                                            <outlet property="nameLabel" destination="kpg-44-odL" id="Ga9-gF-bbK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3BX-bx-cLR" firstAttribute="top" secondItem="QUe-Wt-Knp" secondAttribute="top" id="ACO-4S-GEr"/>
+                            <constraint firstItem="QUe-Wt-Knp" firstAttribute="trailing" secondItem="3BX-bx-cLR" secondAttribute="trailing" id="YE6-qs-NSt"/>
+                            <constraint firstItem="QUe-Wt-Knp" firstAttribute="bottom" secondItem="3BX-bx-cLR" secondAttribute="bottom" id="gpQ-Gt-PH9"/>
+                            <constraint firstItem="3BX-bx-cLR" firstAttribute="leading" secondItem="QUe-Wt-Knp" secondAttribute="leading" id="lUE-js-696"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QUe-Wt-Knp"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7jK-7z-feg" appends="YES" id="Pwg-gn-Km8"/>
+                        </connections>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sqL-Rs-IBc"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="3BX-bx-cLR" id="pcf-2S-W54"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="7jK-7z-feg">
+                    <connections>
+                        <action selector="longPressedHandlerWithGestureRecognizer:" destination="BYZ-38-t0r" id="tDq-8q-4h3"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="972" y="84.107946026986511"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="liz-kq-Idi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jf1-2x-rEb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hBz-oh-Pzn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="76O-zD-w5c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="we4-fe-LTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="84.107946026986511"/>
         </scene>
     </scenes>
 </document>

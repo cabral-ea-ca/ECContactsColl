@@ -14,6 +14,13 @@
 		0D3F495B20EE90FD0084A012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D3F495920EE90FD0084A012 /* LaunchScreen.storyboard */; };
 		0D3F496620EE90FD0084A012 /* ECContactsCollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F496520EE90FD0084A012 /* ECContactsCollTests.swift */; };
 		0D3F497120EE90FD0084A012 /* ECContactsCollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F497020EE90FD0084A012 /* ECContactsCollUITests.swift */; };
+		0D3F497F20EE91420084A012 /* DisplayAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F497E20EE91420084A012 /* DisplayAlert.swift */; };
+		0D3F498120EE91670084A012 /* HCContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F498020EE91670084A012 /* HCContact.swift */; };
+		0D3F498320EE921D0084A012 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F498220EE921D0084A012 /* StringExt.swift */; };
+		0D3F498620EE92BB0084A012 /* ViewControllerExt .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F498520EE92BB0084A012 /* ViewControllerExt .swift */; };
+		0D3F498820EE92D30084A012 /* ViewControllerHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F498720EE92D30084A012 /* ViewControllerHandlers.swift */; };
+		0D3F498A20EE92F00084A012 /* ContactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F498920EE92F00084A012 /* ContactCollectionViewCell.swift */; };
+		0D3F498C20EE930D0084A012 /* ContactCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F498B20EE930D0084A012 /* ContactCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		0D3F496C20EE90FD0084A012 /* ECContactsCollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECContactsCollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3F497020EE90FD0084A012 /* ECContactsCollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECContactsCollUITests.swift; sourceTree = "<group>"; };
 		0D3F497220EE90FD0084A012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D3F497E20EE91420084A012 /* DisplayAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAlert.swift; sourceTree = "<group>"; };
+		0D3F498020EE91670084A012 /* HCContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCContact.swift; sourceTree = "<group>"; };
+		0D3F498220EE921D0084A012 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		0D3F498520EE92BB0084A012 /* ViewControllerExt .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerExt .swift"; sourceTree = "<group>"; };
+		0D3F498720EE92D30084A012 /* ViewControllerHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHandlers.swift; sourceTree = "<group>"; };
+		0D3F498920EE92F00084A012 /* ContactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D3F498B20EE930D0084A012 /* ContactCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				0D3F495020EE90FB0084A012 /* AppDelegate.swift */,
-				0D3F495220EE90FB0084A012 /* ViewController.swift */,
+				0D3F497E20EE91420084A012 /* DisplayAlert.swift */,
+				0D3F498020EE91670084A012 /* HCContact.swift */,
+				0D3F498220EE921D0084A012 /* StringExt.swift */,
 				0D3F495420EE90FB0084A012 /* Main.storyboard */,
 				0D3F495720EE90FD0084A012 /* Assets.xcassets */,
 				0D3F495920EE90FD0084A012 /* LaunchScreen.storyboard */,
 				0D3F495C20EE90FD0084A012 /* Info.plist */,
+				0D3F498420EE92710084A012 /* Main View */,
 			);
 			path = ECContactsColl;
 			sourceTree = "<group>";
@@ -123,6 +140,18 @@
 				0D3F497220EE90FD0084A012 /* Info.plist */,
 			);
 			path = ECContactsCollUITests;
+			sourceTree = "<group>";
+		};
+		0D3F498420EE92710084A012 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				0D3F495220EE90FB0084A012 /* ViewController.swift */,
+				0D3F498520EE92BB0084A012 /* ViewControllerExt .swift */,
+				0D3F498720EE92D30084A012 /* ViewControllerHandlers.swift */,
+				0D3F498920EE92F00084A012 /* ContactCollectionViewCell.swift */,
+				0D3F498B20EE930D0084A012 /* ContactCollectionViewLayout.swift */,
+			);
+			path = "Main View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +285,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3F497F20EE91420084A012 /* DisplayAlert.swift in Sources */,
+				0D3F498C20EE930D0084A012 /* ContactCollectionViewLayout.swift in Sources */,
+				0D3F498120EE91670084A012 /* HCContact.swift in Sources */,
+				0D3F498820EE92D30084A012 /* ViewControllerHandlers.swift in Sources */,
 				0D3F495320EE90FB0084A012 /* ViewController.swift in Sources */,
 				0D3F495120EE90FB0084A012 /* AppDelegate.swift in Sources */,
+				0D3F498A20EE92F00084A012 /* ContactCollectionViewCell.swift in Sources */,
+				0D3F498320EE921D0084A012 /* StringExt.swift in Sources */,
+				0D3F498620EE92BB0084A012 /* ViewControllerExt .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N7238GD4W;
 				INFOPLIST_FILE = ECContactsColl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N7238GD4W;
 				INFOPLIST_FILE = ECContactsColl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
